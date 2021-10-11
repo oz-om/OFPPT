@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 80vmin;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 0 0 20px 2px #d0d0d0;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  width: 350px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  background-color: transparent;
+  transform: rotate(45deg);
+  border: 12px solid;
+}
+.f {border-color: #249F60}
+.s {border-color: #B2B2B2}
+.t {border-color: #166AD8}
+
+.main :is(.s, .t)::before {
+  content: '';
+  width: 12px;
+  height: 80px;
+  position: absolute;
+  top: 44.8px;
+  left: 0;
+  z-index: 4
+}
+
+.s::before {background-color: #249F60}
+.t::before {background-color: #B2B2B2}
+
+.title {
+  width: 350px;
+  padding: 0 30px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  letter-spacing: 3mm;
+  font-family: 'Vollkorn SC', serif;
+  color: #1F005E
+}
+
